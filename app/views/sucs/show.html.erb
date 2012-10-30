@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @suc.name %>
+</p>
+
+<p>
+  <b>Suc:</b>
+  <%= @suc.suc %>
+</p>
+
+<p>
+  <b>Tarih:</b>
+  <%= @suc.tarih %>
+</p>
+
+<p>
+  <b>Suclu:</b>
+  <%= @suc.suclu %>
+</p>
+
+<p>
+  <b>Suctipi:</b>
+  <%= @suc.suctipi %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @suc.address %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @suc.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @suc.latitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @suc.gmaps %>
+</p>
+
+
+<%= link_to 'Edit', edit_suc_path(@suc) %> |
+<%= link_to 'Back', sucs_path %>

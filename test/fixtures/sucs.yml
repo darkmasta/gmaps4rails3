@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  suc: MyString
+  tarih: MyString
+  suclu: MyString
+  suctipi: MyString
+  address: MyString
+  longitude: 1.5
+  latitude: 1.5
+  gmaps: false
+
+two:
+  name: MyString
+  suc: MyString
+  tarih: MyString
+  suclu: MyString
+  suctipi: MyString
+  address: MyString
+  longitude: 1.5
+  latitude: 1.5
+  gmaps: false

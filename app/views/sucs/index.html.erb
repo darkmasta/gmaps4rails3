@@ -1,0 +1,42 @@
+
+<h1>Listing sucs</h1>
+
+<table>
+  <tr>
+    <th>Name </th>
+    <th>Suc </th>
+    <th>Tarih </th>
+    <th>Suclu </th>
+    <th>Suctipi </th>
+    <th>Address </th>
+    <th>Longitude </th>
+    <th>Latitude </th>
+    <th>Gmaps </th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sucs.each do |suc| %>
+  <tr>
+    <td><%= suc.name %></td>
+    <td><%= suc.suc %></td>
+    <td><%= suc.tarih %></td>
+    <td><%= suc.suclu %></td>
+    <td><%= suc.suctipi %></td>
+    <td><%= suc.address %></td>
+    <td><%= suc.longitude %></td>
+    <td><%= suc.latitude %></td>
+    <td><%= suc.gmaps %></td>
+    <td><%= link_to 'Show', suc %></td>
+    <td><%= link_to 'Edit', edit_suc_path(suc) %></td>
+    <td><%= link_to 'Destroy', suc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Suc', new_suc_path %>
+<%= gmaps("markers" => {"data" => @json, "options" => {"list_container" => "marker_list"}} )%>
+<ul id="marker_list"></ul>

@@ -1,0 +1,53 @@
+<%= form_for(@suc) do |f| %>
+  <% if @suc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@suc.errors.count, "error") %> prohibited this suc from being saved:</h2>
+
+      <ul>
+      <% @suc.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :suc %><br />
+    <%= f.text_field :suc %>
+  </div>
+  <div class="field">
+    <%= f.label :tarih %><br />
+    <%= f.text_field :tarih %>
+  </div>
+  <div class="field">
+    <%= f.label :suclu %><br />
+    <%= f.text_field :suclu %>
+  </div>
+  <div class="field">
+    <%= f.label :suctipi %><br />
+    <%= f.text_field :suctipi %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :gmaps %><br />
+    <%= f.check_box :gmaps %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
